@@ -18,7 +18,7 @@ class StoreController extends Controller
 {
     public function store(Request $request) {
         $file = $request->file('file');
-        if (Auth::check()) {
+        if (Auth::check() && $file != null) {
             $name = $file->getClientOriginalName();
             $name = 'u' . Auth::id() . "-" . str_replace(" ", "-", $name);
             $path = $file->storeAs(
