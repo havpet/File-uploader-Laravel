@@ -15,6 +15,9 @@ Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
+Route::post('/register', 'HomeController@redirect');
+Route::get('/register', 'HomeController@redirect');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/store', 'StoreController@store');
 Route::get('/get/{hash}', 'StoreController@get');

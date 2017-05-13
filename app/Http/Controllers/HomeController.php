@@ -30,4 +30,8 @@ class HomeController extends Controller
             'files' => $this->storeController->getFilesForUser()
         ]);
     }
+
+    public function redirect() {
+        return redirect('/');
+    }
 }
