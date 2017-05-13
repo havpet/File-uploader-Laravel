@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Upload file</div>
+                <div class="panel-heading">Upload file (Max 20MB)</div>
 
                 <div class="panel-body">
                     {{ Form::open(array('url' => '/store','files'=>'true')) }}
@@ -28,7 +28,7 @@
 
                 <div class="panel-body">
                     @foreach ($files as $file)
-                            <a href="/get/{{ $file->hash }}">{{ $file->name }}</a>
+                            <a href="/download/{{ $file->hash }}">{{ $file->name }}</a>
                             <br />
                     @endforeach
                 </div>

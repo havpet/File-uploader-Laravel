@@ -33,6 +33,10 @@ class StoreController extends Controller
 
             return redirect("/home");
         }
+
+        else {
+            return redirect("/login");
+        }
     }
 
     public function getFilesForUser() {
@@ -42,7 +46,7 @@ class StoreController extends Controller
         return $files;
     }
 
-    public function get($hash) {
+    public function download($hash) {
         $name = DB::table('files')
             ->where('hash', '=', $hash)->select('name')->pluck('name')[0];
 
