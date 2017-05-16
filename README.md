@@ -1,4 +1,4 @@
-# LinksApp - Simple file upload application
+# Simple file upload application
 * Framework: Laravel 5
 
 ## Features
@@ -9,7 +9,7 @@
 ## How to use
 1. Download and install Composer
 2. Run: `composer global require "laravel/installer"`
-3. Make new laravel application: `laravel new LinksApp`
+3. Make new laravel application: `laravel new app`
 4. Pull this repository
 5. Set up an SQL database
 6. Make an [.env file with application configuration](https://github.com/laravel/laravel/blob/master/.env.example)
